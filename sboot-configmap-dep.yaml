@@ -1,0 +1,22 @@
+kind: "DeploymentConfig"
+apiVersion: "v1"
+metadata:
+  name: "springboot-configmap"
+spec:
+  template: 
+    metadata:
+      labels:
+        name: "springboot-configmap"
+    spec:
+      containers:
+        - name: "sboot-cmap"
+          image: "muthuv/sprinboot-openshift"
+          ports:
+            - containerPort: 8080
+              protocol: "TCP"
+  replicas: 1
+  selector:
+    name: "springboot-configmap"
+  strategy: 
+    type: "Rolling"
+

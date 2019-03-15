@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: reload-example
+data:
+  application.properties: |-
+    property1=from-configmap1
+    property2=from-configmap2
