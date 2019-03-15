@@ -1,7 +1,7 @@
 # Create config map for application.properties, also can load from .properties file if required
 oc create -f sboot-configmap.yaml
 
-# Service account access to user
+# Service account access to pod
 oc policy add-role-to-user view system:serviceaccount:myproject:default
 
 # build the maven project 
